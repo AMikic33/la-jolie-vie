@@ -1,2 +1,3 @@
 # La-Jolie-Vie
-dog salon website
+
+This is a React project for a dog salon website
