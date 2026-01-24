@@ -10,32 +10,38 @@
 
 /* Hero Section */
 .hero {
-  height: 1300px;
-  width: auto;
+  width: 100%;
   background: black;
   color: white;
   overflow: hidden;
-  padding: 0 20% 20px;
+  padding: 70px 20% 0; /* space for fixed navbar */
   position: relative;
 }
 
 .hero-img {
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: auto;
+  max-height: calc(100vh - 70px); /* allow image to scale to available height */
+  object-fit: contain; /* ensure entire image is visible */
+  object-position: center top;
   z-index: 1;
+  margin: 0 auto;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 5%;
-  position: relative;
-  z-index: 10;
+  height: 70px;
+  padding: 0 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #F5F1E8;
+  color: black;
+  z-index: 200;
 }
 
 .logo {
@@ -49,21 +55,101 @@
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 2.5rem;
-  position: fixed;
-  top: 1.25rem;
-  right: 2rem;
-  z-index: 30;
-  background: transparent;
+  gap: 2rem;
   margin: 0;
 }
 
 .nav-links a {
-  color: white;
+  color: black;
   text-decoration: none;
   font-weight: 500;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
   position: relative;
+  padding: 0.5rem 0.25rem;
+}
+
+/* Hamburger / mobile menu */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  width: 40px;
+  height: 36px;
+  padding: 0;
+  cursor: pointer;
+  z-index: 300;
+}
+
+.navbar {
+  position: fixed;
+}
+.menu-toggle .bar {
+  display: block;
+  height: 3px;
+  background: black;
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.menu-toggle.open .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.menu-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.mobile-backdrop {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    height: calc(100vh - 70px);
+    width: 260px;
+    background: white;
+    flex-direction: column;
+    padding: 1.5rem;
+    transform: translateX(100%);
+    transition: transform 0.28s ease;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.08);
+    z-index: 250;
+  }
+
+  .nav-links.open {
+    transform: translateX(0);
+  }
+
+  .nav-links li {
+    margin-bottom: 1rem;
+  }
+
+  .mobile-backdrop.open {
+    display: block;
+    position: fixed;
+    inset: 70px 0 0 0;
+    background: rgba(0,0,0,0.35);
+    z-index: 240;
+  }
+
+  /* Ensure nav links look tappable on mobile */
+  .nav-links a {
+    padding: 0.6rem 0.25rem;
+    font-size: 1.05rem;
+  }
 }
 
 .nav-links a::after {
@@ -169,6 +255,119 @@
   margin-bottom: 4rem;
 }
 
+/* Gallery */
+.gallery-section {
+  padding: 4rem 0 6rem;
+  background: #F5F1E8;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 12px;
+  background: #f6f7fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Carousel styles */
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track {
+  position: relative;
+  height: 60vh;
+  display: block;
+}
+
+.carousel-slide {
+  position: absolute;
+  inset: 0 0 0 0;
+  opacity: 0;
+  transform: scale(1.02);
+  transition: opacity 300ms ease, transform 400ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.85);
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  z-index: 30;
+}
+
+.carousel-btn.prev { left: 12px; }
+.carousel-btn.next { right: 12px; }
+
+.carousel-indicators {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 12px;
+  display: flex;
+  gap: 8px;
+  z-index: 40;
+}
+
+.carousel-indicators .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.6);
+  cursor: pointer;
+}
+
+.carousel-indicators .dot.active {
+  background: rgba(255,255,255,1);
+}
+
+@media (max-width: 768px) {
+  .carousel-track { height: 50vh; }
+  .carousel-btn { width: 38px; height: 38px; }
+}
+
 /* Services Section */
 .services-section {
   padding: 6rem 0;
@@ -183,7 +382,7 @@
 }
 
 .service-card {
-  background: white;
+  background: #F5F1E8;
   padding: 2.5rem;
   border-radius: 20px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.08);
@@ -196,7 +395,7 @@
 .service-card.active {
   transform: translateY(-10px);
   box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
-  border-color: #667eea;
+  border-color: #8FAE9E;
 }
 
 .service-icon {
@@ -214,7 +413,7 @@
 .service-price {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #667eea;
+  color: #69ac89;
   margin-bottom: 1rem;
 }
 
@@ -268,7 +467,7 @@
 }
 
 .stat {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #8FAE9E 0%, #7D8F7A 100%);
   padding: 2rem;
   border-radius: 15px;
   text-align: center;
@@ -345,7 +544,7 @@
 
 .submit-button {
   padding: 1rem 2rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #8FAE9E 0%, #7D8F7A 100%);
   color: white;
   border: none;
   border-radius: 10px;
@@ -363,9 +562,10 @@
 
 /* Footer */
 .footer {
-  background: linear-gradient(135deg, #2d3561 0%, #1e2442 100%);
+  background: linear-gradient(135deg, #8FAE9E 0%, #7D8F7A 100%);
   color: white;
   padding: 3rem 0 1.5rem;
+  margin-top: 3rem;
 }
 
 .footer-content {

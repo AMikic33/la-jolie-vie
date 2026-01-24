@@ -1,23 +1,62 @@
-import placeholder from "../placeholder.jpeg";
+import { useState, useEffect } from "react";
+import hero from "../img/hero.png";
 
 export default function Hero() {
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
     <header className="hero">
-      <img src={placeholder} alt="Hero background" className="hero-img" />
+      <img src={hero} alt="Hero background" className="hero-img" />
+
       <nav className="navbar">
-        <div className="logo"></div>
-        <ul className="nav-links">
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+        {/* <div className="logo">La Jolie Vie</div> */}
+
+        <button
+          className={`menu-toggle ${open ? "open" : ""}`}
+          aria-label="Toggle navigation"
+          aria-expanded={open}
+          onClick={() => setOpen((s) => !s)}
+        >
+          <span className="bar" />
+          <span className="bar" />
+          <span className="bar" />
+        </button>
+
+        <ul className={`nav-links ${open ? "open" : ""}`}>
+          <li>
+            <a href="#gallery" onClick={() => setOpen(false)}>
+              Gallery
+            </a>
+          </li>
+          <li>
+            <a href="#services" onClick={() => setOpen(false)}>
+              Services
+            </a>
+          </li>
+          <li>
+            <a href="#about" onClick={() => setOpen(false)}>
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#contact" onClick={() => setOpen(false)}>
+              Contact
+            </a>
+          </li>
         </ul>
       </nav>
-      <div className="hero-content">
-        {/* <h1 className="hero-title">Premium Dog Grooming</h1>
-        <p className="hero-subtitle">Where Every Pup Receives Royal Treatment</p> */}
-        <a href="#services" className="cta-button">Book Appointment</a>
-      </div>
-      <div className="hero-overlay"></div>
+
+      <div
+        className={`mobile-backdrop ${open ? "open" : ""}`}
+        onClick={() => setOpen(false)}
+      />
     </header>
   );
 }

@@ -51,8 +51,8 @@ export default function Services() {
   return (
     <section id="services" className="services-section">
       <div className="container">
-        <h2 className="section-title">Our Services</h2>
-        <p className="section-subtitle">Tailored grooming experiences for your beloved companion</p>
+        <h2 className="section-title">Leistungen</h2>
+        <p className="section-subtitle">Ist der passende Service für Ihren Vierbeiner nicht dabei? Kontaktieren Sie uns gerne persönlich.</p>
         <div className="services-grid">
           {services.map(service => (
             <div 

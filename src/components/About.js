@@ -29,7 +29,7 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className="about-stats">
+          {/* <div className="about-stats">
             <div className="stat">
               <h3>15+</h3>
               <p>Years of Excellence</p>
@@ -42,7 +42,7 @@ export default function About() {
               <h3>5★</h3>
               <p>Average Rating</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
