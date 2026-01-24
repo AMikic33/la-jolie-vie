@@ -58,7 +58,8 @@ export default function Gallery() {
   return (
     <section id="gallery" className="gallery-section">
       <div className="container">
-        <h2 className="section-title">Gallery</h2>
+        <h2 className="section-title">Diese Website befindet sich noch im Aufbau</h2>
+        {/* <h2 className="section-title">Galerie</h2> */}
 
         <div
           className="carousel"
@@ -72,7 +73,7 @@ export default function Gallery() {
               prev();
               resetTimer();
             }}
-            aria-label="Previous"
+            aria-label="Zurück"
           >
             ‹
           </button>
@@ -95,7 +96,7 @@ export default function Gallery() {
               next();
               resetTimer();
             }}
-            aria-label="Next"
+            aria-label="Weiter"
           >
             ›
           </button>
@@ -114,6 +115,7 @@ export default function Gallery() {
             ))}
           </div>
         </div>
+        <p className="gallery-tagline">Gepflegter Hund. Glücklicher Hund.</p>
       </div>
     </section>
   );

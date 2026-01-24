@@ -6,44 +6,44 @@ export default function Services() {
   const services = [
     {
       id: 1,
-      name: 'Luxury Bath & Brush',
-      price: '$45-75',
-      description: 'Premium shampoo, conditioning treatment, blow dry, and brush out',
+      name: 'Luxusbad & Bürsten',
+    //   price: '45-75€',
+      description: 'Premium-Shampoo, Pflegebehandlung, Föhnen und Ausbürsten',
       icon: '🛁'
     },
     {
       id: 2,
-      name: 'Full Grooming',
-      price: '$65-120',
-      description: 'Complete grooming including bath, haircut, nail trim, and ear cleaning',
+      name: 'Vollständige Fellpflege',
+    //   price: '65-120€',
+      description: 'Komplette Pflege inkl. Bad, Haarschnitt, Krallenpflege und Ohrenreinigung',
       icon: '✂️'
     },
     {
       id: 3,
-      name: 'Puppy Spa Day',
-      price: '$55-85',
-      description: 'Gentle introduction to grooming for puppies under 6 months',
+      name: 'Welpen Spa-Tag',
+    //   price: '55-85€',
+      description: 'Sanfte Einführung in die Pflege für Welpen unter 6 Monaten',
       icon: '🐕'
     },
     {
       id: 4,
-      name: 'Nail & Paw Care',
-      price: '$25',
-      description: 'Nail trimming, filing, and paw pad moisturizing treatment',
+      name: 'Krallen- & Pfotenpflege',
+    //   price: '25€',
+      description: 'Krallenschneiden, Feilen und Pfotenballen-Feuchtigkeitsbehandlung',
       icon: '💅'
     },
     {
       id: 5,
-      name: 'Teeth Cleaning',
-      price: '$30',
-      description: 'Professional teeth brushing and fresh breath treatment',
+      name: 'Zahnreinigung',
+    //   price: '30€',
+      description: 'Professionelles Zähneputzen und Frischer-Atem-Behandlung',
       icon: '🦷'
     },
     {
       id: 6,
-      name: 'De-shedding Treatment',
-      price: '$40-70',
-      description: 'Special treatment to reduce shedding and promote healthy coat',
+      name: 'Enthaarungs-Behandlung',
+    //   price: '40-70€',
+      description: 'Spezialbehandlung zur Reduzierung des Haarens und für gesundes Fell',
       icon: '🌟'
     }
   ];

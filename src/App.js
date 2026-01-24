@@ -4,6 +4,7 @@ import Services from './components/Services';
 import About from './components/About';
 import Gallery from './components/Gallery';
 import Contact from './components/Contact';
+import Anfahrt from './components/Anfahrt';
 import Footer from './components/Footer';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Services />
       <About />
       <Contact />
+      <Anfahrt />
       <Footer />
     </div>
   );

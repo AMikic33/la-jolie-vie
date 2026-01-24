@@ -32,22 +32,27 @@ export default function Hero() {
         <ul className={`nav-links ${open ? "open" : ""}`}>
           <li>
             <a href="#gallery" onClick={() => setOpen(false)}>
-              Gallery
+              Galerie
             </a>
           </li>
           <li>
             <a href="#services" onClick={() => setOpen(false)}>
-              Services
+              Leistungen
             </a>
           </li>
           <li>
             <a href="#about" onClick={() => setOpen(false)}>
-              About
+              Über uns
             </a>
           </li>
           <li>
             <a href="#contact" onClick={() => setOpen(false)}>
-              Contact
+              Kontakt
+            </a>
+          </li>
+          <li>
+            <a href="#anfahrt" onClick={() => setOpen(false)}>
+              Anfahrt
             </a>
           </li>
         </ul>
