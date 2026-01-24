@@ -18,8 +18,8 @@ export default function Footer() {
           <div className="footer-section">
             <h4>Folgen Sie uns</h4>
             <div className="social-links">
-              <a href="#">Instagram</a>
-              <a href="#">Facebook</a>
+              {/* <a href="#">Instagram</a>
+              <a href="#">Facebook</a> */}
             </div>
           </div>
         </div>
