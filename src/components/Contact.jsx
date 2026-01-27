@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const [status, setStatus] = useState('');
@@ -8,25 +7,20 @@ export default function Contact() {
     e.preventDefault();
     setStatus('sending');
     
-    const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
-    const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
-    const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
-
-    if (!serviceId || !templateId || !publicKey) {
-      console.error('Missing EmailJS env vars. See .env.example');
-      setStatus('error');
-      setTimeout(() => setStatus(''), 5000);
-      return;
-    }
-
-    emailjs.sendForm(serviceId, templateId, e.target, publicKey)
-      .then((result) => {
-        console.log('Email sent successfully:', result.text);
+    const formData = new FormData(e.target);
+    
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString()
+    })
+      .then(() => {
         setStatus('success');
         e.target.reset();
         setTimeout(() => setStatus(''), 5000);
-      }, (error) => {
-        console.error('Email sending failed:', error.text);
+      })
+      .catch((error) => {
+        console.error('Form submission failed:', error);
         setStatus('error');
         setTimeout(() => setStatus(''), 5000);
       });
@@ -69,12 +63,32 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          <form className="contact-form" onSubmit={handleSubmit}>
+          <form 
+            name="contact" 
+            method="POST" 
+            data-netlify="true"
+            encType="multipart/form-data"
+            className="contact-form" 
+            onSubmit={handleSubmit}
+          >
+            <input type="hidden" name="form-name" value="contact" />
             <input type="text" name="name" placeholder="Ihr Name" required />
             <input type="email" name="email" placeholder="Ihre E-Mail" required />
             <input type="tel" name="phone" placeholder="Telefonnummer" required />
             <input type="text" name="dogName" placeholder="Name Ihres Hundes" required />
             <textarea name="message" placeholder="Erzählen Sie uns von Ihrem Vierbeiner und der gewünschten Leistung" rows="5" required></textarea>
+            <div className="file-upload-wrapper">
+              <label htmlFor="photo" className="file-upload-label">
+                📷 Foto Ihres Hundes hochladen (optional)
+              </label>
+              <input 
+                type="file" 
+                id="photo" 
+                name="photo" 
+                accept="image/*"
+                className="file-upload-input"
+              />
+            </div>
             <button type="submit" className="submit-button" disabled={status === 'sending'}>
               {status === 'sending' ? 'Wird gesendet...' : 'Termin anfragen'}
             </button>
