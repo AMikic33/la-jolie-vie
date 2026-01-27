@@ -391,8 +391,7 @@
 }
 
 .service-card {
-  /* background: linear-gradient(135deg, #8FAE9E 0%, #7D8F7A 100%); */
-  background: linear-gradient(135deg, #8FAE9E 0%, #7D8F7A 100%);
+  background: linear-gradient(135deg, #8FAE9E 60%, #739486 100%);
   /* background: #053027; */
   padding: 2.5rem;
   border-radius: 20px;
@@ -458,7 +457,8 @@
 }
 
 .stat {
-  background: linear-gradient(135deg, #8FAE9E 0%, #7D8F7A 100%);
+  /* background: linear-gradient(135deg, #8FAE9E 0%, #7D8F7A 100%); */
+  background: linear-gradient(135deg, #8FAE9E 60%, #739486 100%);
   padding: 2rem;
   border-radius: 15px;
   text-align: center;
@@ -542,7 +542,7 @@
 
 .submit-button {
   padding: 1rem 2rem;
-  background: linear-gradient(135deg, #8FAE9E 0%, #7D8F7A 100%);
+  background: linear-gradient(135deg, #8FAE9E 60%, #739486 100%);
   color: white;
   border: none;
   border-radius: 10px;
@@ -615,7 +615,7 @@
 
 /* Footer */
 .footer {
-  background: linear-gradient(135deg, #8FAE9E 0%, #7D8F7A 100%);
+  background: linear-gradient(135deg, #8FAE9E 60%, #739486 100%);
   color: white;
   padding: 3rem 0 1.5rem;
 }

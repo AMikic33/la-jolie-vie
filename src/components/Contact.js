@@ -8,17 +8,23 @@ export default function Contact() {
     e.preventDefault();
     setStatus('sending');
     
-    // Replace these with your actual EmailJS credentials
-    const serviceId = 'YOUR_SERVICE_ID';
-    const templateId = 'YOUR_TEMPLATE_ID';
-    const publicKey = 'YOUR_PUBLIC_KEY';
-    
+    const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+    const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      console.error('Missing EmailJS env vars. See .env.example');
+      setStatus('error');
+      setTimeout(() => setStatus(''), 5000);
+      return;
+    }
+
     emailjs.sendForm(serviceId, templateId, e.target, publicKey)
       .then((result) => {
         console.log('Email sent successfully:', result.text);
         setStatus('success');
         e.target.reset();
-        setTimeout(() => setStatus(''), 5000); // Clear message after 5 seconds
+        setTimeout(() => setStatus(''), 5000);
       }, (error) => {
         console.error('Email sending failed:', error.text);
         setStatus('error');
