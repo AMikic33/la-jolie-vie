@@ -5,8 +5,35 @@ export default function About() {
         <div className="about-content">
           <div className="about-text">
             <h2 className="section-title">Über La Jolie Vie</h2>
+            <br />
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            La Jolie Vie ist aus der tiefen Überzeugung entstanden, dass jeder Hund eine ruhige, 
+            respektvolle und liebevolle Pflege verdient.
+            <br />
+            <br />
+            Für mich ist Grooming nicht nur ein Beruf, sondern eine bewusste Entscheidung, mit Geduld, 
+            Feingefühl und fachlicher Kompetenz zu arbeiten.
+            <br />
+            <br />
+            Ich bin mit Hunden und anderen Tieren aufgewachsen, und die Liebe sowie der respektvolle 
+            Umgang mit ihnen begleiten mich seit meiner Kindheit. Vor über zehn Jahren kam Joli, ein 
+            Cavalier King Charles Welpe, in mein Leben, den eine enge Freundin adoptiert hat. Durch sie 
+            wurde mir noch bewusster, wie sensibel, feinfühlig und emotional Hunde sind und wie wichtig Ruhe, 
+            Verständnis und Vertrauen in der Pflege sind. In dieser Zeit reifte meine Entscheidung, diesen 
+            Weg auch professionell zu gehen.
+            <br />
+            <br />
+            Jeder Hund ist einzigartig mit seinem eigenen Charakter, seinem Tempo und seinen individuellen 
+            Bedürfnissen. Genau darauf gehe ich bei jeder Behandlung ein. Mein Ziel ist es, eine stressfreie 
+            Umgebung zu schaffen, in der sich Ihr Vierbeiner sicher und wohlfühlt.
+            Meine professionelle Ausbildung habe ich 2019 abgeschlossen, und 2025 mein Fachwissen durch eine 
+            weitere Ausbildung gezielt vertieft, um meine Arbeit kontinuierlich weiterzuentwickeln. Großen Wert 
+            lege ich auf eine professionelle, hygienische und hochwertige Pflege. Gleichzeitig steht für mich 
+            immer das Wohl des Hundes an erster Stelle, ohne Hektik, ohne Zwang, mit viel Ruhe und Zeit.
+            <br />
+            <br />
+            La Jolie Vie ist ein Ort, an dem Vertrauen, Qualität und Liebe zum Tier zusammenkommen.
+            Für einen gepflegten, entspannten und glücklichen Hund.
             </p>
           </div>
         </div>

@@ -115,7 +115,7 @@ export default function Gallery() {
             ))}
           </div>
         </div>
-        <p className="gallery-tagline">Gepflegter Hund. Glücklicher Hund.</p>
+        <p className="gallery-tagline">Gepflegter Hund. Glücklicher Hund. La Jolie Vie</p>
       </div>
     </section>
   );

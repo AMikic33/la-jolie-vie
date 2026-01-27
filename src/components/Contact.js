@@ -1,28 +1,29 @@
+import { useState } from 'react';
+import emailjs from '@emailjs/browser';
+
 export default function Contact() {
+  const [status, setStatus] = useState('');
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    setStatus('sending');
     
-    const formData = new FormData(e.target);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const phone = formData.get('phone');
-    const dogName = formData.get('dogName');
-    const message = formData.get('message');
+    // Replace these with your actual EmailJS credentials
+    const serviceId = 'YOUR_SERVICE_ID';
+    const templateId = 'YOUR_TEMPLATE_ID';
+    const publicKey = 'YOUR_PUBLIC_KEY';
     
-    const subject = encodeURIComponent(`Terminanfrage von ${name}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\n` +
-      `E-Mail: ${email}\n` +
-      `Telefon: ${phone}\n` +
-      `Name des Hundes: ${dogName}\n\n` +
-      `Nachricht:\n${message}`
-    );
-    
-    // window.location.href = `mailto:grooming.lajolie@gmail.com?subject=${subject}&body=${body}`;
-    window.location.href = `mailto:mikicosana@gmail.com?subject=${subject}&body=${body}`;
-
-    
-    e.target.reset();
+    emailjs.sendForm(serviceId, templateId, e.target, publicKey)
+      .then((result) => {
+        console.log('Email sent successfully:', result.text);
+        setStatus('success');
+        e.target.reset();
+        setTimeout(() => setStatus(''), 5000); // Clear message after 5 seconds
+      }, (error) => {
+        console.error('Email sending failed:', error.text);
+        setStatus('error');
+        setTimeout(() => setStatus(''), 5000);
+      });
   };
 
   return (
@@ -43,14 +44,14 @@ export default function Contact() {
               <span className="contact-icon">📞</span>
               <div>
                 <h4>Rufen Sie uns an</h4>
-                <p>Kommt bald</p>
+                <p>0163 421 1971</p>
               </div>
             </div>
             <div className="contact-item">
               <span className="contact-icon">⏰</span>
               <div>
                 <h4>Öffnungszeiten</h4>
-                <p>Montag-Freitag: 09:00 -18:00 Uhr</p>
+                <p>Montag-Freitag: 09:00 - 18:00 Uhr</p>
                 <p>Samstag: Nach Vereinbarung</p>
               </div>
             </div>
@@ -68,7 +69,19 @@ export default function Contact() {
             <input type="tel" name="phone" placeholder="Telefonnummer" required />
             <input type="text" name="dogName" placeholder="Name Ihres Hundes" required />
             <textarea name="message" placeholder="Erzählen Sie uns von Ihrem Vierbeiner und der gewünschten Leistung" rows="5" required></textarea>
-            <button type="submit" className="submit-button">Termin anfragen</button>
+            <button type="submit" className="submit-button" disabled={status === 'sending'}>
+              {status === 'sending' ? 'Wird gesendet...' : 'Termin anfragen'}
+            </button>
+            {status === 'success' && (
+              <p style={{color: 'green', marginTop: '10px'}}>
+                ✓ Nachricht erfolgreich gesendet! Wir melden uns bald bei Ihnen.
+              </p>
+            )}
+            {status === 'error' && (
+              <p style={{color: 'red', marginTop: '10px'}}>
+                ✗ Fehler beim Senden. Bitte versuchen Sie es erneut oder rufen Sie uns an.
+              </p>
+            )}
           </form>
         </div>
       </div>

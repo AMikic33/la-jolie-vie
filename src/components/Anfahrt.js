@@ -26,8 +26,10 @@ export default function Anfahrt() {
             <div className="anfahrt-item">
               <h3>🚗 Mit dem Auto</h3>
               <p>
-                Folgen Sie der A96 und fahren Sie auf die B2R Richtung Candidplatz / Candidstraße in Untergiesing-Harlaching.
-Nehmen Sie anschließend die Ausfahrt Richtung Grünwald / Giesing / Stadion / Zoo von der B2R.
+                Folgen Sie der A96 und fahren Sie auf die B2R Richtung Candidplatz / Candidstraße in 
+                Untergiesing-Harlaching.Nehmen Sie anschließend die Ausfahrt Richtung Grünwald / Giesing / 
+                Stadion / Zoo von der B2R.
+                Nehmen Sie anschließend die Ausfahrt Richtung Grünwald / Giesing / Stadion / Zoo von der B2R.
               </p>
             </div>
           </div>

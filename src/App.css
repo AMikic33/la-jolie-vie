@@ -392,7 +392,8 @@
 
 .service-card {
   /* background: linear-gradient(135deg, #8FAE9E 0%, #7D8F7A 100%); */
-  background: #1f453b;
+  background: linear-gradient(135deg, #8FAE9E 0%, #7D8F7A 100%);
+  /* background: #053027; */
   padding: 2.5rem;
   border-radius: 20px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.08);
@@ -441,7 +442,7 @@
 .about-content {
   max-width: 900px;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
 }
 
 .about-text p {
@@ -617,7 +618,6 @@
   background: linear-gradient(135deg, #8FAE9E 0%, #7D8F7A 100%);
   color: white;
   padding: 3rem 0 1.5rem;
-  margin-top: 3rem;
 }
 
 .footer-content {
