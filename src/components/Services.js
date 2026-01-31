@@ -7,43 +7,77 @@ export default function Services() {
     {
       id: 1,
       name: 'Komplettpflege',
-    //   price: '45-75€',
+      price: [
+        'XS (bis 5 kg) – ab 85 €',
+        'S (5–10 kg) – ab 95 €',
+        'M (10–20 kg) – ab 110 €',
+        'L (20–30 kg) – ab 130 €',
+        'XL (ab 30 kg) – ab 160 €'
+      ],
       description: 'Waschen · Föhnen · Bürsten · Schneiden / Stylen inkl. Ohren-, Krallen- & Pfotenpflege',
       icon: '🐶🛁'
     },
     {
       id: 2,
       name: 'Pflege ohne Schneiden',
-    //   price: '65-120€',
+      price: [
+        'XS (bis 5 kg) – ab 55 €',
+        'S (5–10 kg) – ab 60 €',
+        'M (10–20 kg) – ab 70 €',
+        'L (20–30 kg) – ab 80 €',
+        'XL (ab 30 kg) – ab 95 €'
+      ],
       description: 'Der Hund wird gepflegt, aber nicht geschnitten.',
       icon: '🐕🫧'
     },
     {
       id: 3,
       name: 'Trimmen / Hand Stripping',
-    //   price: '55-85€',
+      price: [
+        'XS (bis 5 kg) – ab 95 €',
+        'S (5–10 kg) – ab 105 €',
+        'M (10–20 kg) – ab 120 €',
+        'L (20–30 kg) – ab 140 €',
+        'XL (ab 30 kg) – ab 170 €',
+      ],
       description: 'Abgestorbenes Fell wird per Hand entfernt, ohne das Fell zu schneiden.',
       icon: '✋🐾'
     },
     {
       id: 4,
       name: 'Zusatzleistungen',
-    //   price: '25€',
+      price: [
+        "Krallen schneiden & feilen – 12 €",
+        "Ohrenreinigung – 12 €",
+        "Pfotenpflege – 15 €",
+        "Mini-Pflege-Paket (Pfoten · Krallen · Ohren) – 35 €",
+        "Hygienischer Schnitt – 10 €",
+        "Entfilzen / intensives Entwirren (15 Min.) – 15 €",
+        "Unterwolle entfernen (Deshedding) – ab 15 €",
+      ],
       description: 'Ergänzende Leistungen, die optional zur Pflege hinzugebucht werden können.',
       icon: '➕✨'
     },
     {
       id: 5,
       name: 'Welpen – Sanfte Eingewöhnung',
-    //   price: '30€',
-      description: 'Spielerische, stressfreie Gewöhnung an die Fellpflege.',
+      price: [
+        'Kennenlern-Termin (15–20 Min) – 25 €',
+        'Mini-Pflege für Welpen (30–40 Min) – 45 €',
+        'Welpen-Pflege mit sanftem Bad (45–60 Min) – 55–60 €',
+        'Hinweis: ab der 12. Lebenswoche. Dauer und Umfang werden dem Welpen individuell angepasst.',
+      ],
+      description: 'Die ersten Besuche beim Hundefriseur sind besonders wichtig. Wir nehmen uns Zeit für eine ruhige, sanfte und individuelle Eingewöhnung.',
       icon: '🐩🧸'
     },
     {
       id: 6,
       name: 'Senioren-Hunde',
-    //   price: '40-70€',
-      description: 'Für Hunde ab 9 Jahren bieten wir einen Seniorenrabatt von 10%',
+      price: [
+        'Senioren-Hunde benötigen besondere Aufmerksamkeit und eine einfühlsame Pflege.', 
+        'Für Hunde ab 9Jahren bieten wir einen Seniorenrabatt von 10%.'
+      ],
+      description: 'Pflege mit besonderer Rücksicht',
       icon: '🦮❤️'
     }
   ];
@@ -61,13 +95,27 @@ export default function Services() {
           {services.map(service => (
             <div 
               key={service.id} 
-              className={`service-card ${selectedService === service.id ? 'active' : ''}`}
+              className="service-card-wrapper"
               onClick={() => setSelectedService(selectedService === service.id ? null : service.id)}
             >
-              <div className="service-icon">{service.icon}</div>
-              <h3>{service.name}</h3>
-              <p className="service-price">{service.price}</p>
-              <p className="service-description">{service.description}</p>
+              <div className={`service-card-inner ${selectedService === service.id ? 'flipped' : ''}`}>
+                <div className="service-card service-card-front">
+                  <div className="service-icon">{service.icon}</div>
+                  <h3>{service.name}</h3>
+                  <p className="service-description">{service.description}</p>
+                </div>
+                <div className="service-card service-card-back">
+                  {Array.isArray(service.price) ? (
+                    <div className="service-price-list">
+                      {service.price.map((priceItem, index) => (
+                        <p key={index} className="service-price-item">{priceItem}</p>
+                      ))}
+                    </div>
+                  ) : (
+                    <p className="service-price-large">{service.price}</p>
+                  )}
+                </div>
+              </div>
             </div>
           ))}
         </div>

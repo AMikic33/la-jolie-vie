@@ -390,22 +390,53 @@
   margin-top: 3rem;
 }
 
+.service-card-wrapper {
+  perspective: 1000px;
+  cursor: pointer;
+  height: 320px;
+  transition: transform 0.3s ease;
+}
+
+.service-card-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+.service-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.service-card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
 .service-card {
-  background: #053027;
   background: #053027;
   padding: 2.5rem;
   border-radius: 20px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
-  cursor: pointer;
   border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.service-card:hover,
-.service-card.active {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
-  border-color: #053027;
+.service-card-front,
+.service-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.service-card-back {
+  transform: rotateY(180deg);
 }
 
 .service-icon {
@@ -430,6 +461,33 @@
 .service-description {
   color: white;
   line-height: 1.6;
+}
+
+.service-price-large {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #FFD700;
+  margin: 2rem 0;
+}
+
+.service-price-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.service-price-item {
+  color: white;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.click-hint {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  margin-top: auto;
+  font-style: italic;
+  color: white;
 }
 
 /* About Section */
