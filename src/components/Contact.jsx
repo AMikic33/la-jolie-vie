@@ -1,38 +1,38 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 
 export default function Contact() {
-  const [status, setStatus] = useState('');
+  // const [status, setStatus] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setStatus('sending');
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   setStatus('sending');
     
-    const formData = new FormData(e.target);
+  //   const formData = new FormData(e.target);
     
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData).toString()
-    })
-      .then(() => {
-        setStatus('success');
-        e.target.reset();
-        setTimeout(() => setStatus(''), 5000);
-      })
-      .catch((error) => {
-        console.error('Form submission failed:', error);
-        setStatus('error');
-        setTimeout(() => setStatus(''), 5000);
-      });
-  };
+  //   fetch('/', {
+  //     method: 'POST',
+  //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+  //     body: new URLSearchParams(formData).toString()
+  //   })
+  //     .then(() => {
+  //       setStatus('success');
+  //       e.target.reset();
+  //       setTimeout(() => setStatus(''), 5000);
+  //     })
+  //     .catch((error) => {
+  //       console.error('Form submission failed:', error);
+  //       setStatus('error');
+  //       setTimeout(() => setStatus(''), 5000);
+  //     });
+  // };
 
   return (
     <section id="contact" className="contact-section">
       <div className="container">
         <h2 className="section-title">Kontaktieren Sie uns</h2>
         <p className="section-subtitle">Wir würden Ihren kostbaren Vierbeiner gerne verwöhnen</p>
-        <div className="contact-content">
-          <div className="contact-info">
+        <div className="contact-content" style={{ display: 'flex', justifyContent: 'center' }}>
+          <div className="contact-info" style={{ maxWidth: '600px' }}>
             <div className="contact-item">
               <span className="contact-icon">📍</span>
               <div>
@@ -52,6 +52,7 @@ export default function Contact() {
               <div>
                 <h4>Öffnungszeiten</h4>
                 <p>Montag-Freitag: 09:00 - 18:00 Uhr</p>
+                <p>Montag-Freitag ab 18:00 Uhr: Nach Vereinbarung</p>
                 <p>Samstag: Nach Vereinbarung</p>
               </div>
             </div>
@@ -63,7 +64,7 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          <form 
+          {/* <form 
             name="contact" 
             method="POST" 
             data-netlify="true"
@@ -79,7 +80,7 @@ export default function Contact() {
             <textarea name="message" placeholder="Erzählen Sie uns von Ihrem Vierbeiner und der gewünschten Leistung" rows="5" required></textarea>
             <div className="file-upload-wrapper">
               <label htmlFor="photo" className="file-upload-label">
-                📷 Foto Ihres Hundes hochladen (optional)
+                📷 Foto Ihres Hundes hochladen
               </label>
               <input 
                 type="file" 
@@ -102,7 +103,7 @@ export default function Contact() {
                 ✗ Fehler beim Senden. Bitte versuchen Sie es erneut oder rufen Sie uns an.
               </p>
             )}
-          </form>
+          </form> */}
         </div>
       </div>
     </section>
