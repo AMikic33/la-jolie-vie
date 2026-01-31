@@ -9,7 +9,9 @@ export default function Anfahrt() {
           <div className="anfahrt-info">
             <div className="anfahrt-item">
               <h3>📍 Adresse</h3>
-              <p>Martin-Luther Str. 24<br />81439 München</p>
+              <p>
+              <strong>Martin-Luther Str. 24 81439 München</strong></p>
+              <p>Der La Jolie Vie Salon liegt im Innenhof. Der Eingang befindet sich zwischen dem Café Violin und dem Billardlokal. </p>
             </div>
 
             <div className="anfahrt-item">
@@ -28,8 +30,7 @@ export default function Anfahrt() {
               <h3>🚗 Mit dem Auto</h3>
               <p>
                 Fahren Sie über den Mittleren Ring (B2R) und nehmen Sie die Ausfahrt Richtung "Giesing / Tegernseer Landstraße". <br/>
-                Folgen Sie der "Tegernseer Landstraße" stadtauswärts und biegen Sie anschließend in die "Martin-Luther-Straße" ein. <br/>
-                Die Hausnummer 24 liegt im Innenhof. Der Eingang befindet sich zwischen dem Café Violin und dem Billardlokal. 
+                Folgen Sie der "Tegernseer Landstraße" stadtauswärts und biegen Sie anschließend in die "Martin-Luther-Straße" ein.
               </p>
             </div>
             <div className="anfahrt-item">
