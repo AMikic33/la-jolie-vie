@@ -7,8 +7,10 @@ export default function Contact() {
       <div className="container">
         <h2 className="section-title">Kontaktieren Sie uns</h2>
         <p className="section-subtitle">Wir würden Ihren kostbaren Vierbeiner gerne verwöhnen</p>
-        <div className="contact-content" style={{ display: 'flex', justifyContent: 'center' }}>
-          <div className="contact-info" style={{ maxWidth: '600px' }}>
+        <p className="section-subtitle"><strong>Termine müssen 24 Stunden im Voraus abgesagt werden.
+                    Ansonsten können Gebühren anfallen, damit die Wirtschaftlichkeit des Unternehmens gewährleistet wird.</strong></p>
+        <div className="contact-content">
+          <div className="contact-info">
             <div className="contact-item">
               <span className="contact-icon">📍</span>
               <div>

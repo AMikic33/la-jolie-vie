@@ -43,10 +43,10 @@ export default function Anfahrt() {
 
           <div className="anfahrt-map">
             <iframe
+              className="map-iframe"
               src="https://maps.google.com/maps?q=48.11316320224432,11.57620395154476&t=&z=15&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="450"
-              style={{ border: 0, borderRadius: '12px' }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

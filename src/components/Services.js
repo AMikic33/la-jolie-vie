@@ -86,7 +86,7 @@ export default function Services() {
     <section id="services" className="services-section">
       <div className="container">
         <h2 className="section-title">Leistungen</h2>
-        <p className="section-subtitle" style={{ marginBottom: '4rem' }}>Ist der passende Service für Ihren Vierbeiner nicht dabei? Kontaktieren Sie uns gerne persönlich.</p>
+        <p className="section-subtitle services-subtitle">Ist der passende Service für Ihren Vierbeiner nicht dabei? Kontaktieren Sie uns gerne persönlich.</p>
         <div className="pricing-notice">
           <h3 className="section-subtitle">Wichtige Hinweise zur Preisgestaltung</h3>
           <p className="section-subtitle">Alle Preise sind Richtpreise und können je nach Fellzustand, Größe, Verhalten und tatsächlichem Zeitaufwand variieren. Der endgültige Preis wird nach persönlicher Einschätzung Ihres Hundes festgelegt.</p>

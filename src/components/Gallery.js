@@ -58,7 +58,6 @@ export default function Gallery() {
   return (
     <section id="gallery" className="gallery-section">
       <div className="container">
-
         <div
           className="carousel"
           onTouchStart={handleTouchStart}
