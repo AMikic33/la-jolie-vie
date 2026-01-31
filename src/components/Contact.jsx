@@ -1,30 +1,6 @@
 // import { useState } from 'react';
 
 export default function Contact() {
-  // const [status, setStatus] = useState('');
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   setStatus('sending');
-    
-  //   const formData = new FormData(e.target);
-    
-  //   fetch('/', {
-  //     method: 'POST',
-  //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-  //     body: new URLSearchParams(formData).toString()
-  //   })
-  //     .then(() => {
-  //       setStatus('success');
-  //       e.target.reset();
-  //       setTimeout(() => setStatus(''), 5000);
-  //     })
-  //     .catch((error) => {
-  //       console.error('Form submission failed:', error);
-  //       setStatus('error');
-  //       setTimeout(() => setStatus(''), 5000);
-  //     });
-  // };
 
   return (
     <section id="contact" className="contact-section">
