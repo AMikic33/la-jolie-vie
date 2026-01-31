@@ -15,21 +15,27 @@ export default function Anfahrt() {
             <div className="anfahrt-item">
               <h3>🚇 Öffentliche Verkehrsmittel</h3>
               <p>
-                <strong>U-Bahn:</strong><br/>U1, Haltestelle Wettersteinplatz, danach 9 Minuten zu Fuß.<br />
-                U2, Haltestelle Silberhornstraße, danach 8 Minuten zu Fuß.<br />
+                <strong>U-Bahn</strong><br/>
+                U2/U8, Haltestelle Silberhornstraße, danach 6 Minuten zu Fuß.<br />
+                U1, Haltestelle Wettersteinplatz, danach 9 Minuten zu Fuß.<br />
                         
-                <strong>Tram:</strong> <br />25 bis Tegernseer Landstraße, dann 2 Minuten zu Fuß.<br />
-                <strong>Bus:</strong> <br />Linie X30 bis Tegernseer Landstraße, dann 2 Minuten zu Fuß.
+                <strong>Tram</strong> <br />25 bis Tegernseer Landstraße, dann 2 Minuten zu Fuß.<br />
+                <strong>Bus</strong> <br />Linie X30 bis Tegernseer Landstraße, dann 2 Minuten zu Fuß.
               </p>
             </div>
 
             <div className="anfahrt-item">
               <h3>🚗 Mit dem Auto</h3>
               <p>
-                Folgen Sie der A96 und fahren Sie auf die B2R Richtung Candidplatz / Candidstraße in 
-                Untergiesing-Harlaching.Nehmen Sie anschließend die Ausfahrt Richtung Grünwald / Giesing / 
-                Stadion / Zoo von der B2R.
-                Nehmen Sie anschließend die Ausfahrt Richtung Grünwald / Giesing / Stadion / Zoo von der B2R.
+                Fahren Sie über den Mittleren Ring (B2R) und nehmen Sie die Ausfahrt Richtung "Giesing / Tegernseer Landstraße". <br/>
+                Folgen Sie der "Tegernseer Landstraße" stadtauswärts und biegen Sie anschließend in die "Martin-Luther-Straße" ein. <br/>
+                Die Hausnummer 24 liegt im Innenhof. Der Eingang befindet sich zwischen dem Café Violin und dem Billardlokal. 
+              </p>
+            </div>
+            <div className="anfahrt-item">
+              <h3>🅿️ Parkmöglichkeiten</h3>
+              <p>
+                Parkmöglichkeiten befinden sich direkt vor dem Salon, auf dem gleichen Parkplatz wie McDonald’s.
               </p>
             </div>
           </div>
