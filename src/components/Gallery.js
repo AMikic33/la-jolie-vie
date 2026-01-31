@@ -58,8 +58,6 @@ export default function Gallery() {
   return (
     <section id="gallery" className="gallery-section">
       <div className="container">
-        <h2 className="section-title">Diese Website befindet sich noch im Aufbau</h2>
-        {/* <h2 className="section-title">Galerie</h2> */}
 
         <div
           className="carousel"

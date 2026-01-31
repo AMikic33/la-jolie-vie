@@ -666,6 +666,18 @@
 .social-links {
   display: flex;
   gap: 1.5rem;
+  align-items: center;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+}
+
+.instagram-icon {
+  width: 40px;
+  height: 40px;
 }
 
 .footer-bottom {
