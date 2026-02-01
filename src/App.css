@@ -552,6 +552,12 @@
   min-width: 50px;
 }
 
+.contact-icon-img {
+  width: 46px;
+  height: 46px;
+  margin-left: -4px;
+}
+
 .contact-item h4 {
   font-family: 'Playfair Display', serif;
   font-size: 1.3rem;

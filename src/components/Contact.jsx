@@ -1,4 +1,5 @@
 // import { useState } from 'react';
+import whatsappIcon from '../logo/whatsapp-icon.png';
 
 export default function Contact() {
 
@@ -19,9 +20,9 @@ export default function Contact() {
               </div>
             </div>
             <div className="contact-item">
-              <span className="contact-icon">📞</span>
+              <img src={whatsappIcon} alt="WhatsApp" className="contact-icon-img" />
               <div>
-                <h4>Rufen Sie uns an</h4>
+                <h4>WhatsApp oder Telefon</h4>
                 <p>0163 421 1971</p>
               </div>
             </div>
