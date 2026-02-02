@@ -1,3 +1,21 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Disallow: /admin
+Disallow: /private
+Allow: /
+
+# Sitemap
+Sitemap: https://hundesalonlajolievie.de/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 10
+
+# Common bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /

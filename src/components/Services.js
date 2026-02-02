@@ -83,7 +83,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="services-section">
+    <section id="services" className="services-section" aria-label="Unsere Leistungen und Preise">
       <div className="container">
         <h2 className="section-title">Leistungen</h2>
         <p className="section-subtitle services-subtitle">Ist der passende Service für Ihren Vierbeiner nicht dabei? Kontaktieren Sie uns gerne persönlich.</p>

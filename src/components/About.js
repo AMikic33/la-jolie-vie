@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section id="about" className="about-section">
+    <section id="about" className="about-section" aria-label="Über La Jolie Vie">
       <div className="container">
         <div className="about-content">
           <div className="about-text">

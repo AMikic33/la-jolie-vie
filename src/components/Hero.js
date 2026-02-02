@@ -13,9 +13,9 @@ export default function Hero() {
 
   return (
     <header className="hero">
-      <img src={hero} alt="Hero background" className="hero-img" />
+      <img src={hero} alt="La Jolie Vie Premium Hundesalon München - Professionelle Hundepflege und Grooming Services" className="hero-img" />
 
-      <nav className="navbar">
+      <nav className="navbar" aria-label="Hauptnavigation">
         {/* <div className="logo">La Jolie Vie</div> */}
 
         <button
@@ -31,27 +31,27 @@ export default function Hero() {
 
         <ul className={`nav-links ${open ? "open" : ""}`}>
           <li>
-            <a href="#gallery" onClick={() => setOpen(false)}>
+            <a href="#gallery" onClick={() => setOpen(false)} title="Galerie unserer Hundepflege-Arbeiten">
               Galerie
             </a>
           </li>
           <li>
-            <a href="#services" onClick={() => setOpen(false)}>
+            <a href="#services" onClick={() => setOpen(false)} title="Unsere Grooming Services und Preise">
               Leistungen
             </a>
           </li>
           <li>
-            <a href="#about" onClick={() => setOpen(false)}>
+            <a href="#about" onClick={() => setOpen(false)} title="Über La Jolie Vie Hundesalon">
               Über uns
             </a>
           </li>
           <li>
-            <a href="#contact" onClick={() => setOpen(false)}>
+            <a href="#contact" onClick={() => setOpen(false)} title="Kontakt und Terminvereinbarung">
               Kontakt
             </a>
           </li>
           <li>
-            <a href="#anfahrt" onClick={() => setOpen(false)}>
+            <a href="#anfahrt" onClick={() => setOpen(false)} title="Anfahrt zum Hundesalon in München">
               Anfahrt
             </a>
           </li>

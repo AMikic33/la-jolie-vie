@@ -3,7 +3,7 @@ import facebookLogo from '../logo/facebook-logo.png';
 
 export default function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer" role="contentinfo">
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
@@ -12,11 +12,13 @@ export default function Footer() {
           </div>
           <div className="footer-section">
             <h4>Schnelllinks</h4>
-            <ul>
-              <li><a href="#services">Leistungen</a></li>
-              <li><a href="#about">Über uns</a></li>
-              <li><a href="#contact">Kontakt</a></li>
-            </ul>
+            <nav aria-label="Footer Navigation">
+              <ul>
+                <li><a href="#services" title="Zu unseren Leistungen">Leistungen</a></li>
+                <li><a href="#about" title="Über uns">Über uns</a></li>
+                <li><a href="#contact" title="Kontakt">Kontakt</a></li>
+              </ul>
+            </nav>
           </div>
           <div className="footer-section">
             <h4>Folgen Sie uns</h4>

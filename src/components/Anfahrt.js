@@ -1,6 +1,6 @@
 export default function Anfahrt() {
   return (
-    <section id="anfahrt" className="anfahrt-section">
+    <section id="anfahrt" className="anfahrt-section" aria-label="Anfahrt und Wegbeschreibung">
       <div className="container">
         <h2 className="section-title">Anfahrt</h2>
         <p className="section-subtitle">So finden Sie uns</p>

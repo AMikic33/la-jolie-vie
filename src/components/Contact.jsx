@@ -4,7 +4,7 @@ import whatsappIcon from '../logo/whatsapp-icon.png';
 export default function Contact() {
 
   return (
-    <section id="contact" className="contact-section">
+    <section id="contact" className="contact-section" aria-label="Kontakt und Terminvereinbarung">
       <div className="container">
         <h2 className="section-title">Kontaktieren Sie uns</h2>
         <p className="section-subtitle">Wir würden Ihren kostbaren Vierbeiner gerne verwöhnen</p>

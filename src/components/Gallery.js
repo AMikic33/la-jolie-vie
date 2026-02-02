@@ -9,6 +9,19 @@ export default function Gallery() {
     (src) => !src.includes('hero')
   );
 
+  // Descriptive alt texts for SEO and accessibility
+  const imageDescriptions = [
+    'Professionell gepflegter Hund nach Komplettpflege im La Jolie Vie Hundesalon München',
+    'Hundefriseur beim Trimmen eines Hundes - Hand Stripping Service',
+    'Entspannter Hund nach der Fellpflege in unserem Grooming Salon',
+    'Welpenpflege - Sanfte Eingewöhnung beim ersten Besuch im Hundesalon',
+    'Vorher-Nachher Ergebnis der professionellen Hundepflege',
+    'Gepflegter Hund mit frischem Haarschnitt und Styling',
+    'Hundesalon München - Luxuriöse Spa-Behandlung für Ihren Vierbeiner',
+    'Krallen- und Pfotenpflege im Premium Hundesalon',
+    'Glücklicher Hund nach der Grooming-Session bei La Jolie Vie'
+  ];
+
   const [index, setIndex] = useState(0);
   const timerRef = useRef(null);
   const touchStartX = useRef(null);
@@ -56,13 +69,15 @@ export default function Gallery() {
   if (!images.length) return null;
 
   return (
-    <section id="gallery" className="gallery-section">
+    <section id="gallery" className="gallery-section" aria-label="Galerie unserer Hundepflege-Arbeiten">
       <div className="container">
+        <h2 className="visually-hidden">Galerie - Unsere Arbeit</h2>
         <div
           className="carousel"
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
           aria-roledescription="carousel"
+          aria-label="Bilderkarussell der Hundepflege-Ergebnisse"
         >
           <button
             className="carousel-btn prev"
@@ -82,7 +97,12 @@ export default function Gallery() {
                 key={i}
                 aria-hidden={i !== index}
               >
-                <img src={src} alt={`Gallery ${i + 1}`} loading="lazy" />
+                <img 
+                  src={src} 
+                  alt={imageDescriptions[i] || `Hundepflege Service ${i + 1} bei La Jolie Vie Hundesalon München`} 
+                  loading="lazy"
+                  title={imageDescriptions[i] || `Hundesalon München - Bild ${i + 1}`}
+                />
               </div>
             ))}
           </div>
