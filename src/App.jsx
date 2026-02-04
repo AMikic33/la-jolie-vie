@@ -6,6 +6,7 @@ import Gallery from './components/Gallery.jsx';
 import Contact from './components/Contact.jsx';
 import Anfahrt from './components/Anfahrt.jsx';
 import Impressum from './components/Impressum.jsx';
+import Datenschutz from './components/Datenschutz.jsx';
 import Footer from './components/Footer.jsx';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -28,6 +29,12 @@ function App() {
           <Route path="/impressum" element={
             <>
               <Impressum />
+              <Footer />
+            </>
+          } />
+          <Route path="/datenschutz" element={
+            <>
+              <Datenschutz />
               <Footer />
             </>
           } />

@@ -4,32 +4,32 @@ export default function Anfahrt() {
       <div className="container">
         <h2 className="section-title">Anfahrt</h2>
         <p className="section-subtitle">So finden Sie uns</p>
-        
+
         <div className="anfahrt-content">
           <div className="anfahrt-info">
             <div className="anfahrt-item">
               <h3>📍 Adresse</h3>
               <p>
-              <strong>Martin-Luther Str. 24 81439 München</strong></p>
+                <strong>Martin-Luther Str. 24 81439 München</strong></p>
               <p>Der La Jolie Vie Salon liegt im Innenhof. Der Eingang befindet sich zwischen dem Café Violin und dem Billardlokal. </p>
             </div>
 
             <div className="anfahrt-item">
               <h3>🚇 Öffentliche Verkehrsmittel</h3>
               <p>
-                <strong>U-Bahn</strong><br/>
+                <strong>U-Bahn</strong><br />
                 U2/U8, Haltestelle Silberhornstraße, danach 6 Minuten zu Fuß.<br />
                 U1, Haltestelle Wettersteinplatz, danach 9 Minuten zu Fuß.<br />
-                        
-                <strong>Tram</strong> <br />25 bis Tegernseer Landstraße, dann 2 Minuten zu Fuß.<br />
-                <strong>Bus</strong> <br />Linie X30 bis Tegernseer Landstraße, dann 2 Minuten zu Fuß.
+
+                <strong>Tram</strong> <br />25 bis Tegernseer Landstraße, danach 2 Minuten zu Fuß.<br />
+                <strong>Bus</strong> <br />Linie X30 bis Tegernseer Landstraße, danach 2 Minuten zu Fuß.
               </p>
             </div>
 
             <div className="anfahrt-item">
               <h3>🚗 Mit dem Auto</h3>
               <p>
-                Fahren Sie über den Mittleren Ring (B2R) und nehmen Sie die Ausfahrt Richtung "Giesing / Tegernseer Landstraße". <br/>
+                Fahren Sie über den Mittleren Ring (B2R) und nehmen Sie die Ausfahrt Richtung "Giesing / Tegernseer Landstraße". <br />
                 Folgen Sie der "Tegernseer Landstraße" stadtauswärts und biegen Sie anschließend in die "Martin-Luther-Straße" ein.
               </p>
             </div>

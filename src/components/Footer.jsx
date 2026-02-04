@@ -19,6 +19,7 @@ export default function Footer() {
                 <li><a href="#about" title="Über uns">Über uns</a></li>
                 <li><a href="#contact" title="Kontakt">Kontakt</a></li>
                 <li><Link to="/impressum" title="Impressum">Impressum</Link></li>
+                <li><Link to="/datenschutz" title="Datenschutzerklärung">Datenschutz</Link></li>
               </ul>
             </nav>
           </div>
