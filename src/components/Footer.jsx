@@ -1,5 +1,6 @@
 import instagramLogo from '../logo/instagram-logo.png';
 import facebookLogo from '../logo/facebook-logo.png';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -17,6 +18,7 @@ export default function Footer() {
                 <li><a href="#services" title="Zu unseren Leistungen">Leistungen</a></li>
                 <li><a href="#about" title="Über uns">Über uns</a></li>
                 <li><a href="#contact" title="Kontakt">Kontakt</a></li>
+                <li><Link to="/impressum" title="Impressum">Impressum</Link></li>
               </ul>
             </nav>
           </div>
