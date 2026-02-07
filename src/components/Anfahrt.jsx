@@ -10,7 +10,7 @@ export default function Anfahrt() {
             <div className="anfahrt-item">
               <h3>📍 Adresse</h3>
               <p>
-                <strong>Martin-Luther Str. 24 81439 München</strong></p>
+                <strong>Martin-Luther Str. 24 81539 München</strong></p>
               <p>Der La Jolie Vie Salon liegt im Innenhof. Der Eingang befindet sich zwischen dem Café Violin und dem Billardlokal. </p>
             </div>
 
