@@ -5,9 +5,14 @@ function importAll(r) {
 }
 
 export default function Gallery() {
-  const images = importAll(require.context('../img', false, /\.(png|jpe?g|svg)$/i)).filter(
-    (src) => !src.includes('hero')
-  );
+  const images = importAll(require.context('../img', false, /\.(png|jpe?g|svg)$/i))
+    .filter((src) => !src.includes('hero'))
+    .sort((a, b) => {
+      // Extract numeric value from filename
+      const numA = parseInt(a.match(/\/(\d+)\./)?.[1] || '0', 10);
+      const numB = parseInt(b.match(/\/(\d+)\./)?.[1] || '0', 10);
+      return numA - numB;
+    });
 
   // Descriptive alt texts for SEO and accessibility
   const imageDescriptions = [
