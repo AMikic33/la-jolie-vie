@@ -9,14 +9,14 @@ export default function Contact() {
         <h2 className="section-title">Kontaktieren Sie uns</h2>
         <p className="section-subtitle">Wir würden Ihren kostbaren Vierbeiner gerne verwöhnen</p>
         <p className="section-subtitle"><strong>Termine müssen 24 Stunden im Voraus abgesagt werden.
-                    Ansonsten können Gebühren anfallen, damit die Wirtschaftlichkeit des Unternehmens gewährleistet wird.</strong></p>
+          Ansonsten können Gebühren anfallen, damit die Wirtschaftlichkeit des Unternehmens gewährleistet wird.</strong></p>
         <div className="contact-content">
           <div className="contact-info">
             <div className="contact-item">
               <span className="contact-icon">📍</span>
               <div>
                 <h4>Besuchen Sie uns</h4>
-                <p>Martin-Luther Str. 24, 81439 München</p>
+                <p>Martin-Luther Str. 24, 81539 München</p>
               </div>
             </div>
             <div className="contact-item">
